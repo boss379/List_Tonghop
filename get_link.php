@@ -39,6 +39,9 @@ if (in_array($ip, $ip_check)) {
         "vtv9-hd",
         "an-ninh-hd",
         "quoc-phong-hd",
+        "ha-noi-1",
+ 	"ha-noi-2-2021",
+	"htv-the-thao",
         "channel-news-asia-hd"
     ];
 
@@ -92,7 +95,7 @@ if (in_array($ip, $ip_check)) {
     file_put_contents($m3u_file, $m3u_content);
 
     // Kiểm tra và ghi đè file TXT
-    $txt_file = 'vtv_links.txt';
+    $txt_file = 'channels.txt';
     $txt_status = file_exists($txt_file) ? "Ghi đè file TXT cũ" : "Tạo mới file TXT";
     file_put_contents($txt_file, $txt_content);
 

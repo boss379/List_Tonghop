@@ -16,9 +16,9 @@ git pull --rebase origin main || (echo ❌ Lỗi khi pull! && exit /b 1)
 git stash pop
 
 REM Kiểm tra xem file có thay đổi không
-git add vtv_playlist.m3u
-git diff --quiet vtv_playlist.m3u && (echo ✅ Không có thay đổi, thoát. && exit /b 0)
+git add vtv_playlist.m3u channels_updated.txt
+git diff --quiet vtv_playlist.m3u channels_updated.txt && (echo ✅ Không có thay đổi, thoát. && exit /b 0)
 
 REM Nếu có thay đổi thì commit và push
 echo 🚀 Đang push thay đổi lên GitHub...
-git commit -m "Auto-update vtv_playlist.m3u" && git push origin main
+git commit -m "Auto-update vtv_playlist.m3u và channels_updated.txt" && git push origin main
