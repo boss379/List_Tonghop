@@ -31,5 +31,9 @@ https://livecdn-vthcm-gcore.vieon.vn/7d9f6aed93244717dbde02da12d1b6e0/1742910483
 https://livecdn-vthcm-gcore.vieon.vn/1f187edebf7d0023007cd0e2c4eb53f5/1742910483000/livetv/enc2/1f84f9beb924cff49ea2d209cc511f57/playlist.m3u8?c=a
 #EXTINF:-1 tvg-id="htvthethaohd" group-title="HTV/HTVC" tvg-logo="https://i.imgur.com/z7NOxJ3.png",HTV Thể Thao
 https://livecdn-vthcm-gcore.vieon.vn/53c740c38a1985fc292068370fa078ec/1742910483000/livetv/enc/d3d81ce359479433b1ccf8d14c1d6578/playlist.m3u8?c=a
+#EXTINF:0 tvg-id="kbsworld" group-title="Quốc Tế (SD)" tvg-logo="https://i.imgur.com/vylHBC8.png", KBS World
+https://livecdn-vthcm-gcore.vieon.vn/8be94807b1f94efabb71732842a697d1/1742910484000/livetv/enc/661c0f3e16bf979c5693f75eba1b4479/playlist.m3u8?c=a
 #EXTINF:-1 tvg-id="nhkworld" group-title="Quốc Tế (HD)" tvg-logo="https://i.imgur.com/Et3vExm.png",NHK World Japan
 https://livecdn-vthcm-gcore.vieon.vn/289956a8a94a3ed9296907783d184fb0/1742910484000/livetv/enc2/b1eddf67e77fa19528edbc703caaf259/playlist.m3u8?c=a
+#EXTINF:-1 tvg-id="" group-title="Quốc Tế (HD)" tvg-logo="https://i.imgur.com/RIQE8kA.png",CHANNEL-NEWS-ASIA
+https://livecdn-vthcm-gcore.vieon.vn/c62e758dc176e308d73955d1910241d5/1742910484000/livetv/enc2/8f40de7d2468953d334d0598b9969d68/playlist.m3u8?c=a
