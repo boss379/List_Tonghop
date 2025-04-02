@@ -1,6 +1,13 @@
 import requests
-import re
 import os
+import json
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+# Thiết lập session với cơ chế retry
+session = requests.Session()
+retries = Retry(total=3, backoff_factor=1, status_forcelist=[500, 502, 503, 504])
+session.mount('https://', HTTPAdapter(max_retries=retries))
 
 # Lấy thông tin đăng nhập từ GitHub Secrets
 VIEON_USERNAME = os.getenv("VIEON_USERNAME")
@@ -29,16 +36,15 @@ login_headers = {
 }
 
 try:
-    login_response = requests.post(login_url, json=login_data, headers=login_headers)
+    login_response = session.post(login_url, json=login_data, headers=login_headers)
     login_response.raise_for_status()
     
     # Lấy access token
-    token_match = re.search(r'"access_token":"(.*?)"', login_response.text)
-    if not token_match:
+    login_response_json = login_response.json()
+    access_token = login_response_json.get("access_token")
+    if not access_token:
         print("❌ Lỗi: Không lấy được access token!")
         exit(1)
-
-    access_token = token_match.group(1)
 
     # Danh sách kênh
     channels = [
@@ -55,7 +61,7 @@ try:
 
     api_url = 'https://api.vieon.vn/backend/cm/v5/slug/livetv/detail?platform=web&ui=012021'
     headers = {
-        'Authorization': access_token,
+        'Authorization': f'Bearer {access_token}',  # Thêm "Bearer" (kiểm tra API yêu cầu)
         'Content-Type': 'application/x-www-form-urlencoded',
         'Referer': 'https://vieon.vn/truyen-hinh-truc-tuyen'
     }
@@ -67,26 +73,39 @@ try:
     for channel in channels:
         post_data = f"livetv_slug=/truyen-hinh-truc-tuyen/{channel}/&platform=web&ui=012021"
         try:
-            response = requests.post(api_url, headers=headers, data=post_data, timeout=10)
+            response = session.post(api_url, headers=headers, data=post_data, timeout=10)
             response.raise_for_status()
             
             # Tìm link HLS
-            match = re.search(r'hls_link_play":"(.*?)"', response.text)
-            if match:
+            response_json = response.json()
+            hls_link = response_json.get("hls_link_play")
+            if hls_link:
                 channel_name = channel.replace('-hd', '').upper()
-                hls_link = match.group(1)
                 txt_content += f"{channel_name}: {hls_link}\n"
                 success_count += 1
+            else:
+                print(f"⚠️ Không tìm thấy link HLS cho kênh {channel}")
         except requests.RequestException as e:
             print(f"⚠️ Không lấy được link {channel}: {e}")
 
     # Lưu vào file trong repo
     txt_file = "channels.txt"
-    with open(txt_file, 'w', encoding='utf-8') as f:
-        f.write(txt_content)
+    try:
+        with open(txt_file, 'w', encoding='utf-8') as f:
+            f.write(txt_content)
+    except IOError as e:
+        print(f"❌ Lỗi khi ghi file {txt_file}: {e}")
+        exit(1)
 
     print(f"✅ Đã lấy thành công {success_count}/{len(channels)} kênh!")
     print(f"📁 File đã được lưu: {txt_file}")
 
 except requests.RequestException as e:
-    print(f"❌ Lỗi đăng nhập: {e}")
+    print(f"❌ Lỗi khi thực hiện yêu cầu HTTP: {e}")
+    exit(1)
+except json.JSONDecodeError as e:
+    print(f"❌ Lỗi khi parse JSON: {e}")
+    exit(1)
+except Exception as e:
+    print(f"❌ Lỗi không xác định: {e}")
+    exit(1)
