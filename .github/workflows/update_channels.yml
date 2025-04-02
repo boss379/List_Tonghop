@@ -1,36 +1,39 @@
-name: Auto Update Channels
+name: Update VieON Channels
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Chạy mỗi giờ một lần
-  workflow_dispatch:  # Cho phép chạy thủ công từ GitHub Actions
+    - cron: '0 */6 * * *'  # Chạy mỗi 6 tiếng
+  workflow_dispatch:  # Cho phép chạy thủ công từ GitHub
 
 jobs:
   update_channels:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: 🛠️ Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt || echo "No dependencies"
+      - name: 📦 Install dependencies
+        run: pip install requests
 
-      - name: Run get_channels.py
+      - name: 🔄 Run get_channels.py
+        env:
+          VIEON_USERNAME: ${{ secrets.VIEON_USERNAME }}
+          VIEON_PASSWORD: ${{ secrets.VIEON_PASSWORD }}
         run: python get_channels.py
 
-      - name: Run convert_m3u8.py
+      - name: 🏗️ Run convert_m3u8.py
         run: python convert_m3u8.py
 
-      - name: Commit and push changes
+      - name: 🚀 Commit and push changes
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add channels_updated.txt
-          git commit -m "Auto update channels_updated.txt" || echo "No changes to commit"
+          git add channels_updated.txt || echo "No new changes"
+          git commit -m "🔄 Auto update channels_updated.txt" || exit 0
           git push
