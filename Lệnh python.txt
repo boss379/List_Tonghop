@@ -1,0 +1,6 @@
+cd /d D:\vieon
+python get_channels.py
+
+
+cd /d D:\cliptv
+python get_channels.py
