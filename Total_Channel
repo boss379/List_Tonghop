@@ -32,13 +32,13 @@ https://live.fptplay53.net/fnxhd1/vntoday_vhls.smil/chunklist_b5000000.m3u8
 https://live.fptplay53.net/fnxhd2/hanoitv1_vhls.smil/chunklist_b5000000.m3u8
 #EXTINF:-1 tvg-id="hanoi2" group-title="Địa phương" tvg-logo="https://i.imgur.com/szivqh2.png",Hà Nội 2
 https://live.fptplay53.net/fnxch2/hntv2_abr.smil/chunklist_b6000000.m3u8
-#EXTINF:-1 tvg-id="vinhlong1hd" group-title="Địa phương" tvg-logo="https://i.imgur.com/gvPtTR2.png",Vĩnh Long 1
+#EXTINF:-1 tvg-id="vinhlong1hd" group-title="TH VĨNH LONG" tvg-logo="https://i.imgur.com/gvPtTR2.png",Vĩnh Long 1
 https://live.fptplay53.net/epzch2/vinhlong1_abr.smil/chunklist_b4200000.m3u8
-#EXTINF:-1 tvg-id="vinhlong2hd" group-title="Địa phương" tvg-logo="https://i.imgur.com/wYadDFn.png",Vĩnh Long 2
+#EXTINF:-1 tvg-id="vinhlong2hd" group-title="TH VĨNH LONG" tvg-logo="https://i.imgur.com/wYadDFn.png",Vĩnh Long 2
 https://live.fptplay53.net/epzhd2/vinhlong2_vhls.smil/chunklist_b5000000.m3u8
-#EXTINF:-1 tvg-id="vinhlong3hd" group-title="Địa phương" tvg-logo="https://i.imgur.com/B8S0dyG.png", Vĩnh Long 3
+#EXTINF:-1 tvg-id="vinhlong3hd" group-title="TH VĨNH LONG" tvg-logo="https://i.imgur.com/B8S0dyG.png", Vĩnh Long 3
 https://live.fptplay53.net/epzch2/vinhlong3_abr.smil/chunklist_b4200000.m3u8
-#EXTINF:-1 tvg-id="vinhlong4hd" group-title="Địa phương" tvg-logo="https://i.imgur.com/xYalJzh.png", Vĩnh Long 4
+#EXTINF:-1 tvg-id="vinhlong4hd" group-title="TH VĨNH LONG" tvg-logo="https://i.imgur.com/xYalJzh.png", Vĩnh Long 4
 https://live.fptplay53.net/epzhd2/vinhlong4hd_vhls.smil/chunklist_b1800000.m3u8
 
 #EXTINF:-1 tvg-id="htv1" group-title="HTV" tvg-logo="https://i.imgur.com/Z8Y74ih.png",HTV1 HD
