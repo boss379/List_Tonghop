@@ -373,3 +373,34 @@ https://s6.kkphimplayer6.com/20250918/48nrktLm/3500kb/hls/index.m3u8
 https://s6.kkphimplayer6.com/20251010/86AEDncn/3500kb/hls/index.m3u8
 #EXTINF:-1 group-title="LIVE EVENTS 🔴" tvg-logo="https://images.fptplay53.net/media/OTT/VOD/2025/09/29/tham-tu-kien-ky-an-khong-dau-fpt-play-1759139646462_Landscape.jpg", Thám Tử Kiên: Kỳ Án Không Đầu
 https://s6.kkphimplayer6.com/20251010/86AEDncn/3500kb/hls/index.m3u8
+
+#EXTINF:-1 tvg-id="box-hits" group-title="📦| Phim" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/box-hits/KenhCoBan",Box Hits
+https://toiyeuvietnam.dpdns.org/CoBan/box-hits/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="box-movie-1-hd" group-title="📦| Phim"  tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/box-movie-1-hd/KenhCoBan",Box Movie 1 HD
+https://toiyeuvietnam.dpdns.org/CoBan/box-movie-1-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="hollywood-classic-hd" group-title="📦| Phim" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/hollywood-classic-hd/KenhCoBan",Hollywood Classic HD
+https://toiyeuvietnam.dpdns.org/CoBan/hollywood-classic-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="in-the-box" group-title="📦| Phim" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/in-the-box/KenhCoBan",In The Box
+https://toiyeuvietnam.dpdns.org/CoBan/in-the-box/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="happy-kids-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/happy-kids-hd/KenhCoBan",Happy Kids HD
+https://toiyeuvietnam.dpdns.org/CoBan/happy-kids-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="woman-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/woman-hd/KenhCoBan",Woman HD
+https://toiyeuvietnam.dpdns.org/CoBan/woman-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="man" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/man/KenhCoBan",Man
+https://toiyeuvietnam.dpdns.org/CoBan/man/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="planet-earth-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/planet-earth-hd/KenhCoBan",Planet Earth HD
+https://toiyeuvietnam.dpdns.org/CoBan/planet-earth-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="dr-fit-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/dr-fit-hd/KenhCoBan",Dr Fit HD
+https://toiyeuvietnam.dpdns.org/CoBan/dr-fit-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="music-box" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/music-box/KenhCoBan",Music box
+https://toiyeuvietnam.dpdns.org/CoBan/music-box/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="outdoor-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/outdoor-hd/KenhCoBan",Outdoor HD
+https://toiyeuvietnam.dpdns.org/CoBan/outdoor-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="channel-news-asia" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/channel-news-asia/KenhCoBan",Channel News Asia
+https://toiyeuvietnam.dpdns.org/CoBan/channel-news-asia/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="afn-hd" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/afn-hd/KenhCoBan",AFN HD
+https://toiyeuvietnam.dpdns.org/CoBan/afn-hd/TuyetDoiKhongKinhDoanh.m3u8
+#EXTINF:-1 tvg-id="hgtv" group-title="Quốc tế" tvg-logo="https://toiyeuvietnam.dpdns.org/Logo/hgtv/KenhCoBan",HGTV
+https://toiyeuvietnam.dpdns.org/CoBan/hgtv/TuyetDoiKhongKinhDoanh.m3u8
+
+#EXTINF:-1 tvg-id="vinhlong4hd" group-title="TH VĨNH LONG" tvg-logo="https://i.imgur.com/xYalJzh.png", Vĩnh Long 4
